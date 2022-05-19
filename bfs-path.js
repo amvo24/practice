@@ -1,13 +1,24 @@
 function findNeighbors(node, matrix) {
+    let neighbors = []
+
+const [row, col] = node;
+
     // Up
+    let top = row - 1
+    neighbors.push([top, col])
+
 
     // Down
+    let bot = row + 1
 
     // Left
+
+    let left = col - 1
 
     // Right
 
     // Your code here
+    return
 }
 
 
@@ -18,22 +29,22 @@ function bfsPath(matrix, startNode, endValue) {
 
 // ***** UNCOMMENT FOR LOCAL TESTING *****
 
-// const matrix1 = [ 
-//     [  1,  2,  3,  4 ],
-//     [  5,  6,  7,  8 ],
-//     [  9, 10, 11, 12 ],
-//     [ 13, 14, 15, 16 ]
-// ];
+const matrix1 = [
+    [  1,  2,  3,  4 ],
+    [  5,  6,  7,  8 ],
+    [  9, 10, 11, 12 ],
+    [ 13, 14, 15, 16 ]
+];
 
 // // EXAMPLE TESTS #1. Tests for findNeighbors function
-// console.log(findNeighbors([1,1], matrix1)) // Finds all 4 neighbors from an
+console.log(findNeighbors([1,1], matrix1)) // Finds all 4 neighbors from an
 // // internal node (left, right, down, up)
 // // [ [ 0, 1 ], [ 2, 1 ], [ 1, 2 ], [ 1, 0 ] ]
 
-// console.log(findNeighbors([0,0], matrix1)); // Finds two neighbors from a
+console.log(findNeighbors([0,0], matrix1)); // Finds two neighbors from a
 // // corner node // [ [ 1, 0 ], [ 0, 1 ] ]
 
-// console.log(findNeighbors([3,1], matrix1)); // Finds three neighbors from
+console.log(findNeighbors([3,1], matrix1)); // Finds three neighbors from
 // // an edge node // [ [ 2, 1 ], [ 3, 2 ], [ 3, 0 ] ]
 
 
@@ -60,11 +71,11 @@ function bfsPath(matrix, startNode, endValue) {
 // // value is located at start node
 // // [ [ 2, 2 ] ]
 
-// console.log(bfsPath(matrix1, [1,2], 8)); // can handle various start nodes 
+// console.log(bfsPath(matrix1, [1,2], 8)); // can handle various start nodes
 // // and end values
 // // [ [ 1, 2 ], [ 0, 2 ], [ 2, 2 ], [ 1, 3 ] ]
 
-// console.log(bfsPath(matrix1, [0,0], 17)); // can return false if end value 
+// console.log(bfsPath(matrix1, [0,0], 17)); // can return false if end value
 // // is not found
 // // false
 
